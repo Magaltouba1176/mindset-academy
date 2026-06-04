@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Paiement Annulé — Mindset Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root { --or:#C9A84C; --or-clair:#E8C97A; --noir:#080808; --dark:#101010; --blanc:#F5F0E8; --gris:#888880; }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body { background:var(--noir); color:var(--blanc); font-family:'DM Sans',sans-serif; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem; }
+  .card { background:var(--dark); border:1px solid rgba(201,168,76,0.15); padding:4rem 3rem; max-width:520px; width:100%; text-align:center; animation:fadeIn 0.6s ease; }
+  @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .icon { font-size:3.5rem; margin-bottom:1.5rem; }
+  h1 { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:300; margin-bottom:1rem; }
+  h1 em { font-style:italic; color:var(--or); }
+  p { font-size:0.9rem; line-height:1.75; color:var(--gris); margin-bottom:1.5rem; }
+  .divider { width:60px; height:1px; background:rgba(201,168,76,0.2); margin:1.5rem auto; }
+  .btn-primary { display:inline-block; background:var(--or); color:var(--noir); padding:0.9rem 2.5rem; font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; transition:background 0.3s; }
+  .btn-primary:hover { background:var(--or-clair); }
+  .quote { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem; color:var(--or-clair); padding:1rem 1.5rem; border-left:2px solid var(--or); text-align:left; margin:1.5rem 0; line-height:1.6; }
+  .quote cite { display:block; margin-top:0.4rem; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gris); font-style:normal; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="icon">🤔</div>
+  <h1>Tu <em>hésites</em> encore ?</h1>
+  <p>Pas de souci — le paiement n'a pas été complété. Ta place n'est pas encore réservée.</p>
+  <div class="quote">
+    « Hier, j'étais intelligent, alors je voulais changer le monde. Aujourd'hui, je suis sage, alors je me change moi-même. »
+    <cite>— Rumi</cite>
+  </div>
+  <p>La transformation commence par une décision. Pour <strong style="color:var(--blanc)">5 000 FCFA</strong>, tu peux rejoindre une communauté de champions et changer ta façon de penser pour toujours.</p>
+  <div class="divider"></div>
+  <a href="/#paiement" class="btn-primary">Retenter le paiement ✦</a>
+</div>
+</body>
+</html>

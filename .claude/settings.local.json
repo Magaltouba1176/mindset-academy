@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(timeout 3 node server.js)",
+      "Bash(node -e \"require\\('/Users/papadiouf/Desktop/mindset-academy/server.js'\\)\")",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(kill %1)",
+      "Bash(node server.js)",
+      "Bash(curl -s -X POST http://localhost:3000/api/paydunya/checkout -H 'Content-Type: application/json' -d '{\"customerName\":\"Test User\",\"customerEmail\":\"test@test.com\",\"customerPhone\":\"+221771234567\"}')",
+      "Bash(lsof -ti:3000)",
+      "Bash(xargs kill -9)",
+      "Bash(curl -s -X POST http://localhost:3000/api/paydunya/checkout -H 'Content-Type: application/json' -d '{\"customerName\":\"Aminata Diallo\",\"customerEmail\":\"aminata@test.com\",\"customerPhone\":\"+221771234567\"}')"
+    ]
+  }
+}
