@@ -156,7 +156,7 @@ async function createPaydunyaInvoice({ customerName, customerEmail, customerPhon
       name:     "Mindset Academy",
       tagline:  "Maîtrise ton esprit. Atteins tous tes objectifs.",
       postal_address: "Dakar, Sénégal",
-      phone_number:   "+221 00 000 0000",   // ← update with your number
+      phone_number:   "+221 77 205 31 66",
       website_url:    APP_URL,
     },
     actions: {
