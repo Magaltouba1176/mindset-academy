@@ -173,6 +173,8 @@ async function createPaydunyaInvoice({ customerName, customerEmail, customerPhon
   };
 
   const result = await httpPost(`${PD_BASE}/checkout-invoice/create`, headers, body);
+  console.log(`PayDunya [${PAYDUNYA.mode}] status=${result.status} body=`, JSON.stringify(result.body));
+
   if (result.status !== 200 || result.body.response_code !== "00") {
     const msg = result.body.response_text || result.body.description || "PayDunya error";
     throw new Error(`PayDunya rejected the invoice: ${msg}`);
@@ -180,8 +182,12 @@ async function createPaydunyaInvoice({ customerName, customerEmail, customerPhon
 
   const token = result.body.token;
 
-  // PayDunya returns the checkout URL in response_text (not invoice_url)
+  // PayDunya returns the checkout URL in response_text (sandbox) or invoice_url (live)
   const invoiceUrl = result.body.invoice_url || result.body.response_text;
+
+  if (!invoiceUrl) {
+    throw new Error(`No checkout URL returned by PayDunya. Token: ${token}`);
+  }
 
   return { ...result.body, invoice_url: invoiceUrl };
 }
