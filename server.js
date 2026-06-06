@@ -281,16 +281,33 @@ const server = http.createServer(async (req, res) => {
   }
 
   // ── Static files ──────────────────────────────────────────────────────────
-  const staticMap = {
-    "/":              ["public/index.html",   "text/html"],
-    "/index.html":    ["public/index.html",   "text/html"],
-    "/success.html":  ["public/success.html", "text/html"],
-    "/cancel.html":   ["public/cancel.html",  "text/html"],
+  const htmlMap = {
+    "/":           "public/index.html",
+    "/index.html": "public/index.html",
+    "/success.html": "public/success.html",
+    "/cancel.html":  "public/cancel.html",
   };
 
-  if (staticMap[pathname]) {
-    const [file, ct] = staticMap[pathname];
-    return serveFile(res, path.join(__dirname, file), ct);
+  if (htmlMap[pathname]) {
+    return serveFile(res, path.join(__dirname, htmlMap[pathname]), "text/html");
+  }
+
+  // Serve any file from the public folder (images, fonts, etc.)
+  const mimeTypes = {
+    ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png",
+    ".gif": "image/gif",  ".webp": "image/webp", ".svg": "image/svg+xml",
+    ".mp4": "video/mp4",  ".webm": "video/webm",
+    ".css": "text/css",   ".js":   "application/javascript",
+    ".woff2": "font/woff2", ".woff": "font/woff",
+  };
+  const ext = path.extname(pathname).toLowerCase();
+  if (mimeTypes[ext]) {
+    const filePath = path.join(__dirname, "public", pathname);
+    if (!filePath.startsWith(path.join(__dirname, "public"))) {
+      res.writeHead(403); res.end("Forbidden");
+      return;
+    }
+    return serveFile(res, filePath, mimeTypes[ext]);
   }
 
   res.writeHead(404); res.end("Not found");
