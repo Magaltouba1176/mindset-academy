@@ -1,286 +1,976 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    body {background-color: #090909}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.2px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.0px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px 'Helvetica Neue'; color: #090909; -webkit-text-stroke: #090909; background-color: #bc993c}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.4px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c; background-color: #bc993c; min-height: 10.0px}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.4px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p7 {margin: 0.0px 0.0px 24.0px 0.0px; text-align: center; font: 19.2px 'Helvetica Neue'; color: #e2bf67; -webkit-text-stroke: #e2bf67}
-    p.p8 {margin: 0.0px 0.0px 18.0px 0.0px; text-align: center; font: 13.8px 'Helvetica Neue'; color: #9a988d; -webkit-text-stroke: #9a988d}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 26.4px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.2px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.6px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2; background-color: #bc993c; background-color: rgba(188, 153, 60, 0.2); min-height: 15.0px}
-    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Helvetica Neue'; color: #f55d14; -webkit-text-stroke: #f55d14}
-    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.4px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.2px 'Helvetica Neue'; color: #090909; -webkit-text-stroke: #090909; background-color: #bc993c}
-    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.2px 'Helvetica Neue'; color: #090909; -webkit-text-stroke: #090909; background-color: #bc993c}
-    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 7.8px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Helvetica Neue'; color: #9a988d; -webkit-text-stroke: #9a988d}
-    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px '.Apple Color Emoji UI'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.4px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.4px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 48.0px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.2px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.8px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2; background-color: #bc993c; min-height: 12.0px}
-    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.8px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.8px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2; background-color: #175ae2; min-height: 12.0px}
-    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p30 {margin: 0.0px 0.0px 14.4px 0.0px; font: 11.2px 'Helvetica Neue'; color: #9a988d; -webkit-text-stroke: #9a988d}
-    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 30.0px 'Helvetica Neue'; color: #bc993c; color: rgba(188, 153, 60, 0.2); -webkit-text-stroke: rgba(188, 153, 60, 0.2)}
-    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.4px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p36 {margin: 0.0px 0.0px 24.0px 0.0px; text-align: center; font: 21.6px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.4px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.2px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 84.0px 'Helvetica Neue'; color: #bc993c; color: rgba(188, 153, 60, 0.2); -webkit-text-stroke: rgba(188, 153, 60, 0.2)}
-    p.p41 {margin: 0.0px 0.0px 12.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #9a988d; -webkit-text-stroke: #9a988d}
-    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p45 {margin: 0.0px 0.0px 18.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px 'Helvetica Neue'; color: #e2bf67; -webkit-text-stroke: #e2bf67}
-    p.p47 {margin: 0.0px 0.0px 24.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #9a988d; -webkit-text-stroke: #9a988d}
-    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; font: 28.8px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px '.Apple Color Emoji UI'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    p.p52 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.4px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 7.8px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.8px '.Apple Color Emoji UI'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.8px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px '.Apple Color Emoji UI'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 7.8px 'Helvetica Neue'; color: #75756d; color: rgba(117, 117, 109, 0.45); -webkit-text-stroke: rgba(117, 117, 109, 0.45)}
-    p.p61 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    p.p62 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.4px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p64 {margin: 0.0px 136.0px 30.0px 136.0px; text-align: center; text-indent: -136.0px; font: 12.0px 'Helvetica Neue'; color: #9a988d; -webkit-text-stroke: #9a988d}
-    p.p65 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.2px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d}
-    p.p66 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.2px 'Helvetica Neue'; color: #090909; -webkit-text-stroke: #090909}
-    p.p67 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.6px 'Helvetica Neue'; color: #75756d; color: rgba(117, 117, 109, 0.5); -webkit-text-stroke: rgba(117, 117, 109, 0.5)}
-    p.p68 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c}
-    p.p69 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 7.4px 'Helvetica Neue'; color: #75756d; color: rgba(117, 117, 109, 0.4); -webkit-text-stroke: rgba(117, 117, 109, 0.4)}
-    li.li48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.6px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2}
-    span.s1 {font-kerning: none; background-color: rgba(9, 9, 9, 0.96)}
-    span.s2 {font-kerning: none}
-    span.s3 {font-kerning: none; background-color: rgba(188, 153, 60, 0.1)}
-    span.s4 {font-kerning: none; color: #bc993c; -webkit-text-stroke: 0px #bc993c}
-    span.s5 {font-kerning: none; color: #f2ece2; -webkit-text-stroke: 0px #f2ece2}
-    span.s6 {font-kerning: none; background-color: #131313}
-    span.s7 {font: 14.4px 'Helvetica Neue'; font-kerning: none; background-color: #131313}
-    span.s8 {font: 12.0px '.Apple Color Emoji UI'; font-kerning: none; background-color: #131313}
-    span.s9 {font: 8.6px 'Zapf Dingbats'; font-kerning: none}
-    span.s10 {font: 8.2px 'Zapf Dingbats'; font-kerning: none}
-    span.s11 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: #f2ece2; -webkit-text-stroke: 0px #f2ece2}
-    span.s12 {font-kerning: none; background-color: #0e0e0e}
-    span.s13 {font-kerning: none; color: #bc993c; background-color: #0e0e0e; -webkit-text-stroke: 0px #bc993c}
-    span.s14 {font-kerning: none; background-color: #090909}
-    span.s15 {font-kerning: none; color: #f2ece2; background-color: #090909; -webkit-text-stroke: 0px #f2ece2}
-    span.s16 {font: 9.4px 'Zapf Dingbats'; font-kerning: none; background-color: #0e0e0e}
-    span.s17 {background-color: #090909; -webkit-text-stroke: 0px #000000}
-    span.s18 {font: 12.0px 'Helvetica Neue'; font-kerning: none; background-color: #090909}
-    span.s19 {font: 9.4px 'Zapf Dingbats'; font-kerning: none; background-color: #090909}
-    span.s20 {font-kerning: none; background-color: #f55d14}
-    span.s21 {font-kerning: none; background-color: rgba(188, 153, 60, 0.078)}
-    span.s22 {font-kerning: none; background-color: #175ae2}
-    span.s23 {font-kerning: none; color: #f2ece2; background-color: #0e0e0e; -webkit-text-stroke: 0px #f2ece2}
-    span.s24 {font-kerning: none; color: #bc993c; background-color: #090909; -webkit-text-stroke: 0px #bc993c}
-    span.s25 {font: 10.2px '.Apple Color Emoji UI'; font-kerning: none; background-color: #090909}
-    span.s26 {font-kerning: none; background-color: #bc993c}
-    ul.ul1 {list-style-type: none}
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mindset Academy — Papa Diouf</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --or: #C9A84C;
+  --or-clair: #E8C97A;
+  --noir: #080808;
+  --dark: #101010;
+  --dark2: #181818;
+  --dark3: #202020;
+  --blanc: #F5F0E8;
+  --gris: #888880;
+  --rouge: #C0392B;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--noir); color: var(--blanc); font-family: var(--sans); overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 3rem;
+  background: rgba(8,8,8,0.96);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  backdrop-filter: blur(10px);
+}
+.nav-logo { display: flex; flex-direction: column; line-height: 1.1; }
+.nav-logo-top { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--or); letter-spacing: 0.1em; }
+.nav-logo-sub { font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gris); }
+.nav-cta {
+  background: var(--or); color: var(--noir); border: none;
+  padding: 0.7rem 1.8rem; font-family: var(--sans); font-size: 0.75rem;
+  font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  transition: background 0.3s;
+}
+.nav-cta:hover { background: var(--or-clair); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 5rem;
+  position: relative; overflow: hidden;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 65%);
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25);
+  padding: 0.5rem 1.2rem; margin-bottom: 2.5rem;
+  font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--or);
+  animation: fadeUp 0.8s ease both 0.1s;
+}
+.badge-dot { width: 6px; height: 6px; background: var(--or); border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:0.5; transform:scale(1.4); } }
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 7vw, 6.5rem);
+  font-weight: 300; line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  animation: fadeUp 0.8s ease both 0.25s;
+}
+.hero h1 em { font-style: italic; color: var(--or); }
+.hero-sub-title {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  color: var(--or-clair); margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease both 0.35s;
+}
+.hero-hook {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  line-height: 1.8; color: #AAA89E;
+  max-width: 620px; margin: 0 auto 1.5rem;
+  animation: fadeUp 0.8s ease both 0.45s;
+}
+.hero-hook strong { color: var(--blanc); }
+
+.hero-stat-bar {
+  display: flex; justify-content: center; gap: 0;
+  margin: 2.5rem auto; max-width: 600px;
+  border: 1px solid rgba(201,168,76,0.15);
+  animation: fadeUp 0.8s ease both 0.55s;
+}
+.h-stat {
+  flex: 1; padding: 1.5rem 1rem; text-align: center;
+  border-right: 1px solid rgba(201,168,76,0.15);
+}
+.h-stat:last-child { border-right: none; }
+.h-stat-num {
+  font-family: var(--serif); font-size: 2.2rem; font-weight: 600;
+  color: var(--or); line-height: 1; margin-bottom: 0.3rem;
+}
+.h-stat-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gris); }
+
+.hero-price-pill {
+  display: inline-flex; align-items: center; gap: 1rem;
+  background: var(--dark2); border: 1px solid rgba(201,168,76,0.25);
+  padding: 1rem 2rem; margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease both 0.6s;
+}
+.price-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gris); }
+.price-amount { font-family: var(--serif); font-size: 2.2rem; font-weight: 600; color: var(--or); }
+.price-period { font-size: 0.78rem; color: var(--gris); }
+
+.hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; animation: fadeUp 0.8s ease both 0.7s; }
+.btn-main {
+  background: var(--or); color: var(--noir); border: none;
+  padding: 1.2rem 3.5rem; font-family: var(--sans);
+  font-size: 0.85rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-main:hover { background: var(--or-clair); transform: translateY(-2px); }
+.hero-guarantee { font-size: 0.72rem; color: var(--gris); letter-spacing: 0.08em; }
+.hero-guarantee span { color: var(--or); }
+
+/* ── MARQUEE ── */
+.marquee-wrap { overflow: hidden; background: var(--or); padding: 0.85rem 0; }
+.marquee-track { display: inline-block; animation: marquee 20s linear infinite; white-space: nowrap; }
+.marquee-track span { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--noir); margin: 0 2rem; }
+.marquee-track .sep { opacity: 0.3; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ── SECTIONS ── */
+section { padding: 6rem 2rem; }
+.container { max-width: 1060px; margin: 0 auto; }
+.section-tag {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.section-tag::before { content:''; display:block; width:24px; height:1px; background:var(--or); }
+h2 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.2rem; }
+h2 em { font-style: italic; color: var(--or); }
+.lead { font-size: 1rem; line-height: 1.8; color: #AAA89E; }
+
+/* ── DOULEUR ── */
+.douleur { background: var(--dark); }
+.douleur-intro { max-width: 600px; margin: 0 auto 4rem; text-align: center; }
+.douleur-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(201,168,76,0.1); }
+.douleur-card { background: var(--dark); padding: 2.5rem 2rem; transition: background 0.3s; }
+.douleur-card:hover { background: var(--dark2); }
+.douleur-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+.douleur-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6rem; }
+.douleur-desc { font-size: 0.87rem; line-height: 1.7; color: var(--gris); }
+
+/* ── 95/5 ── */
+.concept { background: var(--noir); }
+.concept-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.concept-visual {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+.donut-wrap { position: relative; width: 260px; height: 260px; }
+.donut-wrap svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.donut-center {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+.donut-pct { font-family: var(--serif); font-size: 4rem; font-weight: 600; color: var(--or); line-height: 1; }
+.donut-sub { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gris); }
+.concept-legend { display: flex; flex-direction: column; gap: 0.7rem; width: 100%; max-width: 240px; }
+.legend-item { display: flex; align-items: center; gap: 0.8rem; font-size: 0.82rem; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.concept-text h2 { margin-bottom: 1.5rem; }
+.concept-text p { font-size: 0.93rem; line-height: 1.85; color: #AAA89E; margin-bottom: 1.2rem; }
+.concept-text strong { color: var(--blanc); }
+blockquote.rumi {
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.15rem; line-height: 1.6; color: var(--or-clair);
+  padding-left: 1.2rem; border-left: 2px solid var(--or);
+  margin: 1.8rem 0;
+}
+blockquote.rumi cite { display:block; margin-top:0.5rem; font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gris); font-style:normal; }
+
+/* ── CE QUE TU OBTIENS ── */
+.offre { background: var(--dark); }
+.offre-header { text-align:center; max-width:560px; margin:0 auto 4rem; }
+.offre-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(201,168,76,0.1); margin-bottom: 4rem; }
+.offre-card {
+  background: var(--dark); padding: 2.5rem 2rem;
+  display: flex; flex-direction: column; gap: 0.8rem;
+  transition: background 0.3s;
+}
+.offre-card:hover { background: var(--dark2); }
+.offre-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 600; color: rgba(201,168,76,0.2); line-height: 1; }
+.offre-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--blanc); }
+.offre-desc { font-size: 0.85rem; line-height: 1.7; color: var(--gris); }
+.offre-check { font-size: 0.78rem; color: var(--or); letter-spacing: 0.05em; }
+
+/* Programme semaine */
+.programme-title { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; margin-bottom: 2rem; text-align:center; }
+.programme-title em { font-style:italic; color:var(--or); }
+.semaines { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(201,168,76,0.1); }
+.semaine {
+  background: var(--dark2); padding: 2rem 1.5rem;
+  border-top: 3px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+.semaine:hover { border-top-color: var(--or); background: var(--dark3); }
+.semaine-num { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--or); margin-bottom: 0.8rem; }
+.semaine-theme { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.6rem; }
+.semaine-desc { font-size: 0.8rem; line-height: 1.65; color: var(--gris); }
+
+/* ── A PROPOS ── */
+.apropos { background: var(--noir); }
+.apropos-inner { display:grid; grid-template-columns:1fr 1.5fr; gap:5rem; align-items:center; }
+.apropos-portrait {
+  background: var(--dark2); border: 1px solid rgba(201,168,76,0.15);
+  aspect-ratio: 3/4; display:flex; align-items:center; justify-content:center;
+  position: relative; overflow:hidden;
+}
+.apropos-portrait::before {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 60%);
+}
+.apropos-portrait::after {
+  content:''; position:absolute; bottom:0; left:0;
+  width:50%; height:3px; background: var(--or);
+}
+.initiales { font-family:var(--serif); font-size:7rem; font-weight:300; color:rgba(201,168,76,0.2); }
+.apropos-name { position:absolute; bottom:1.2rem; left:1.2rem; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--or); opacity:0.7; }
+.apropos-content h2 { margin-bottom:1.5rem; }
+.apropos-content p { font-size:0.9rem; line-height:1.85; color:#AAA89E; margin-bottom:1rem; }
+.apropos-stats { display:flex; gap:2rem; margin: 1.5rem 0; padding: 1.5rem 0; border-top:1px solid rgba(201,168,76,0.12); border-bottom:1px solid rgba(201,168,76,0.12); }
+.a-stat-n { font-family:var(--serif); font-size:2rem; font-weight:600; color:var(--or); }
+.a-stat-l { font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gris); }
+
+/* ── TEMOIGNAGES ── */
+.temoignages { background: var(--dark); }
+.testi-header { text-align:center; max-width:480px; margin:0 auto 3.5rem; }
+.testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(201,168,76,0.1); }
+.testi-card { background:var(--dark); padding:2.5rem 2rem; }
+.stars { color:var(--or); font-size:0.8rem; letter-spacing:0.1em; margin-bottom:1.2rem; }
+.testi-text { font-family:var(--serif); font-style:italic; font-size:1.05rem; line-height:1.7; color:var(--blanc); margin-bottom:1.5rem; }
+.testi-author strong { display:block; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--or-clair); margin-bottom:0.2rem; }
+.testi-author span { font-size:0.68rem; color:var(--gris); }
+
+/* ── PAIEMENT ── */
+.paiement { background: var(--noir); }
+.paiement-inner { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+.paiement-left h2 { margin-bottom:1.5rem; }
+.paiement-left .lead { margin-bottom:2rem; }
+.recap-list { list-style:none; display:flex; flex-direction:column; gap:0.8rem; margin-bottom:2rem; }
+.recap-list li { display:flex; align-items:flex-start; gap:0.8rem; font-size:0.88rem; line-height:1.5; }
+.recap-list li::before { content:'✦'; color:var(--or); font-size:0.6rem; margin-top:0.3rem; flex-shrink:0; }
+.total-box {
+  background:var(--dark2); border:1px solid rgba(201,168,76,0.2);
+  padding:1.5rem; display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:1.5rem;
+}
+.total-label { font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gris); }
+.total-price { font-family:var(--serif); font-size:2.4rem; font-weight:600; color:var(--or); }
+.total-note { font-size:0.7rem; color:var(--gris); }
+
+/* WAVE PAYMENT FORM */
+.wave-box {
+  background:var(--dark2); border:1px solid rgba(201,168,76,0.2);
+  padding:2.5rem;
+  position:relative;
+}
+.wave-box::before {
+  content:'PAIEMENT SÉCURISÉ';
+  position:absolute; top:-0.65rem; left:1.5rem;
+  font-size:0.58rem; letter-spacing:0.3em;
+  background:var(--or); color:var(--noir);
+  padding:0.2rem 0.8rem; font-weight:600;
+}
+.wave-logo {
+  display:flex; align-items:center; gap:0.6rem;
+  margin-bottom:2rem; padding-bottom:1.2rem;
+  border-bottom:1px solid rgba(201,168,76,0.12);
+}
+.wave-icon {
+  width:40px; height:40px; background:#1A73E8; border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.2rem; font-weight:700; color:#fff;
+}
+.wave-logo-text { font-family:var(--serif); font-size:1.2rem; font-weight:600; color:var(--blanc); }
+.wave-logo-sub { font-size:0.65rem; color:var(--gris); }
+
+.form-group { margin-bottom:1.2rem; }
+.form-label { display:block; font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gris); margin-bottom:0.5rem; }
+.form-input {
+  width:100%; background:var(--dark3); border:1px solid rgba(201,168,76,0.15);
+  color:var(--blanc); font-family:var(--sans); font-size:0.9rem;
+  padding:0.9rem 1rem; outline:none; transition:border-color 0.3s;
+}
+.form-input:focus { border-color:var(--or); }
+.form-input::placeholder { color:rgba(136,136,128,0.5); }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+
+.wave-amount-display {
+  background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2);
+  padding:1rem; text-align:center; margin-bottom:1.2rem;
+}
+.wave-amount-label { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gris); margin-bottom:0.3rem; }
+.wave-amount-val { font-family:var(--serif); font-size:2rem; font-weight:600; color:var(--or); }
+
+.btn-wave {
+  width:100%; background:#1A73E8; color:#fff; border:none;
+  padding:1.1rem; font-family:var(--sans); font-size:0.82rem;
+  font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  cursor:pointer; transition:background 0.3s; display:flex;
+  align-items:center; justify-content:center; gap:0.8rem;
+  position:relative;
+}
+.btn-wave:hover { background:#1557B0; }
+.btn-wave.loading { opacity:0.7; pointer-events:none; }
+
+.wave-security { display:flex; align-items:center; gap:0.5rem; margin-top:0.8rem; justify-content:center; }
+.wave-security span { font-size:0.65rem; color:var(--gris); letter-spacing:0.08em; }
+
+/* Success Modal */
+.modal-overlay {
+  display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92);
+  z-index:500; align-items:center; justify-content:center;
+}
+.modal-overlay.active { display:flex; }
+.modal-box {
+  background:var(--dark2); border:1px solid rgba(201,168,76,0.25);
+  padding:3rem; max-width:480px; width:90%; text-align:center;
+  position:relative;
+}
+.modal-icon { font-size:3rem; margin-bottom:1.2rem; }
+.modal-box h3 { font-family:var(--serif); font-size:1.8rem; font-weight:300; margin-bottom:1rem; }
+.modal-box h3 em { font-style:italic; color:var(--or); }
+.modal-box p { font-size:0.88rem; line-height:1.7; color:var(--gris); margin-bottom:1.5rem; }
+.modal-steps { text-align:left; list-style:none; margin-bottom:2rem; }
+.modal-steps li { font-size:0.85rem; padding:0.6rem 0; border-bottom:1px solid rgba(201,168,76,0.08); display:flex; gap:0.8rem; }
+.modal-steps li:last-child { border-bottom:none; }
+.modal-steps li::before { content:'✦'; color:var(--or); font-size:0.6rem; margin-top:0.25rem; }
+.btn-modal { background:var(--or); color:var(--noir); border:none; padding:0.9rem 2.5rem; font-family:var(--sans); font-size:0.78rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; cursor:pointer; }
+
+/* ── FAQ ── */
+.faq { background:var(--dark); }
+.faq-header { text-align:center; max-width:480px; margin:0 auto 3rem; }
+.faq-list { max-width:700px; margin:0 auto; display:flex; flex-direction:column; gap:1px; background:rgba(201,168,76,0.1); }
+.faq-item { background:var(--dark); }
+.faq-q {
+  width:100%; background:none; border:none; color:var(--blanc);
+  font-family:var(--sans); font-size:0.92rem; font-weight:500;
+  padding:1.5rem 1.8rem; text-align:left; cursor:pointer;
+  display:flex; justify-content:space-between; align-items:center;
+  transition:color 0.3s;
+}
+.faq-q:hover { color:var(--or); }
+.faq-q .icon { font-size:1.2rem; color:var(--or); transition:transform 0.3s; flex-shrink:0; }
+.faq-q.open .icon { transform:rotate(45deg); }
+.faq-a { display:none; padding:0 1.8rem 1.5rem; font-size:0.87rem; line-height:1.75; color:var(--gris); }
+.faq-a.open { display:block; }
+
+/* ── CTA FINAL ── */
+.cta-final {
+  background:var(--noir); text-align:center; padding:8rem 2rem;
+  position:relative; overflow:hidden;
+}
+.cta-final::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,168,76,0.07) 0%, transparent 65%);
+}
+.cta-final > * { position:relative; z-index:1; }
+.cta-final h2 { max-width:640px; margin:0 auto 1.5rem; }
+.cta-final .lead { max-width:480px; margin:0 auto 2.5rem; }
+.cta-countdown { display:flex; justify-content:center; gap:1.5rem; margin-bottom:2.5rem; }
+.count-unit { text-align:center; }
+.count-num { font-family:var(--serif); font-size:2.5rem; font-weight:600; color:var(--or); line-height:1; display:block; }
+.count-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gris); }
+.count-sep { font-family:var(--serif); font-size:2rem; color:rgba(201,168,76,0.4); align-self:flex-start; margin-top:0.3rem; }
+
+/* ── FOOTER ── */
+footer {
+  background:var(--dark); border-top:1px solid rgba(201,168,76,0.1);
+  padding:2.5rem 3rem;
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:1rem;
+}
+.f-logo { font-family:var(--serif); font-size:1rem; color:var(--or); letter-spacing:0.1em; text-transform:uppercase; }
+.f-links { display:flex; gap:2rem; }
+.f-links a { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gris); text-decoration:none; transition:color 0.3s; }
+.f-links a:hover { color:var(--or); }
+.f-copy { font-size:0.62rem; color:rgba(136,136,128,0.4); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── RESPONSIVE ── */
+@media(max-width:800px) {
+  nav { padding:1rem 1.2rem; }
+  section { padding:4rem 1.2rem; }
+  .hero { padding:7rem 1.2rem 4rem; }
+  .hero-stat-bar { flex-direction:row; }
+  .douleur-grid, .offre-grid, .testi-grid, .semaines { grid-template-columns:1fr; }
+  .concept-inner, .apropos-inner, .paiement-inner { grid-template-columns:1fr; gap:3rem; }
+  .form-row { grid-template-columns:1fr; }
+  footer { flex-direction:column; text-align:center; }
+  .f-links { justify-content:center; flex-wrap:wrap; }
+}
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">Mindset Academy</span></p>
-<p class="p2"><span class="s1">AVEC PAPA DIOUF</span></p>
-<p class="p3"><span class="s2">REJOINDRE — 5 000 FCFA</span></p>
-<p class="p4"><span class="s2"></span><br></p>
-<p class="p5"><span class="s3">COACHING DE GROUPE — CHAQUE SAMEDI EN LIGNE</span></p>
-<h1 style="margin: 0.0px 0.0px 6.0px 0.0px; text-align: center; font: 56.0px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2"><span class="s2">Mindset<br>
-</span><span class="s4">Academy</span></h1>
-<p class="p7"><span class="s2">« Maîtrise ton esprit. Atteins tous tes objectifs. »</span></p>
-<p class="p8"><span class="s2">Tu connais les stratégies. Tu travailles dur. Mais quelque chose te bloque.<br>
-</span><span class="s5">La vérité ? C'est à 95% une question de mental.</span><span class="s2"><br>
-Rejoins le coaching de groupe qui va tout changer.</span></p>
-<p class="p9"><span class="s2">4</span></p>
-<p class="p10"><span class="s2">SEMAINES</span></p>
-<p class="p9"><span class="s2">2h</span></p>
-<p class="p10"><span class="s2">PAR SESSION</span></p>
-<p class="p9"><span class="s2">∞</span></p>
-<p class="p10"><span class="s2">TRANSFORMATION</span></p>
-<p class="p11"><span class="s6">INVESTISSEMENT TOTAL</span></p>
-<p class="p9"><span class="s6">5 000 </span><span class="s7">FCFA</span></p>
-<p class="p12"><span class="s2"></span><br></p>
-<p class="p11"><span class="s6">PAIEMENT VIA</span></p>
-<p class="p13"><span class="s6">PayDunya </span><span class="s8">🔐</span></p>
-<p class="p14"><span class="s6">Wave · Orange Money · Carte</span></p>
-<p class="p15"><span class="s2">JE REJOINS LA MINDSET ACADEMY →</span></p>
-<p class="p11"><span class="s9">✦</span><span class="s2"> </span><span class="s4">Places limitées</span><span class="s2"> — Accès immédiat au groupe WhatsApp après paiement</span></p>
-<p class="p16"><span class="s2">MAÎTRISE TON MENTAL</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">95% MINDSET · 5% STRATÉGIE</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">PENSE COMME UN CHAMPION</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">ARRÊTE DE SURVIVRE. COMMENCE À VIVRE.</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">ÉLÈVE TES STANDARDS</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">MAÎTRISE TON MENTAL</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">95% MINDSET · 5% STRATÉGIE</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">PENSE COMME UN CHAMPION</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">ARRÊTE DE SURVIVRE. COMMENCE À VIVRE.</span><span class="s10">✦</span><span class="s11"> </span><span class="s2">ÉLÈVE TES STANDARDS</span><span class="s10">✦</span></p>
-<p class="p17"><span class="s12">LE VRAI PROBLÈME</span></p>
-<h2 style="margin: 0.0px 0.0px 14.4px 0.0px; text-align: center; font: 36.0px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2"><span class="s12">Tu travailles dur.</span><span class="s2"><br>
-</span><span class="s12">Mais </span><span class="s13">ça ne suffit pas.</span></h2>
-<p class="p19"><span class="s12">Si tu te reconnais dans l'un de ces scénarios, ce coaching est fait pour toi.</span></p>
-<p class="p20"><span class="s12">😔</span></p>
-<p class="p21"><span class="s12">Tu te sabotes sans t'en rendre compte</span></p>
-<p class="p22"><span class="s12">Tu commences des projets, tu ne les termines pas. Tu procrastines. Tu sais quoi faire, mais tu ne le fais pas. Ce n'est pas de la paresse — c'est un problème de mental.</span></p>
-<p class="p20"><span class="s12">😰</span></p>
-<p class="p21"><span class="s12">Tu as peur sans savoir de quoi</span></p>
-<p class="p22"><span class="s12">La peur de l'échec. La peur du jugement. La peur de ne pas être assez bon. Ces peurs invisibles te maintiennent exactement là où tu es.</span></p>
-<p class="p20"><span class="s12">😤</span></p>
-<p class="p21"><span class="s12">Tu es plein de bonnes intentions mais peu de résultats</span></p>
-<p class="p22"><span class="s12">Tu suis des formations, tu regardes des vidéos, tu lis des livres. Mais les résultats ne suivent pas. Parce que la connaissance sans le bon état d'esprit ne mène nulle part.</span></p>
-<p class="p20"><span class="s12">😞</span></p>
-<p class="p21"><span class="s12">Tu te compares aux autres et tu perds confiance</span></p>
-<p class="p22"><span class="s12">Tu vois les succès des autres sur les réseaux et tu te demandes ce qui ne va pas chez toi. Ce cycle de comparaison détruit ta motivation et ton identité de leader.</span></p>
-<p class="p23"><span class="s14">95%</span></p>
-<p class="p24"><span class="s14">MINDSET</span></p>
-<p class="p25"><span class="s2"></span><br></p>
-<p class="p26"><span class="s14">95% — Mindset &amp; Mental</span></p>
-<p class="p27"><span class="s2"></span><br></p>
-<p class="p26"><span class="s14">5% — Stratégies &amp; Tactiques</span></p>
-<p class="p28"><span class="s14">LA PHILOSOPHIE</span></p>
-<h2 style="margin: 0.0px 0.0px 18.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c"><span class="s15">Le succès, c'est</span><span class="s5"><br>
-</span><span class="s14">d'abord dans la tête</span></h2>
-<p class="p30"><span class="s14">La plupart des gens cherchent la prochaine stratégie, le prochain hack, la prochaine formation. Mais </span><span class="s15">les stratégies sans le bon mental ne fonctionnent pas.</span></p>
-<p class="p30"><span class="s14">Regarde autour de toi : deux personnes avec les mêmes ressources, les mêmes informations — l'une réussit, l'autre échoue. La différence ? </span><span class="s15">Ce qui se passe dans leur tête.</span></p>
-<blockquote style="margin: 0.0px 0.0px 21.6px 0.0px; font: 13.8px 'Helvetica Neue'; color: #e2bf67; -webkit-text-stroke: #e2bf67"><span class="s14">« Hier, j'étais intelligent, alors je voulais changer le monde. Aujourd'hui, je suis sage, alors je me change moi-même. »</span></blockquote>
-<blockquote style="margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d"><span class="s14">— RUMI</span></blockquote>
-<p class="p30"><span class="s14">La Mindset Academy n'est pas une formation de plus. C'est </span><span class="s15">une transformation de l'intérieur</span><span class="s14">, qui rend toutes tes autres stratégies enfin efficaces.</span></p>
-<p class="p17"><span class="s12">CE QUE TU OBTIENS</span></p>
-<h2 style="margin: 0.0px 0.0px 14.4px 0.0px; text-align: center; font: 36.0px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2"><span class="s12">Tout ce qui est</span><span class="s2"><br>
-</span><span class="s13">inclus</span><span class="s12"> dans ta place</span></h2>
-<p class="p33"><span class="s12">01</span></p>
-<p class="p21"><span class="s12">4 Sessions Live de 2h</span></p>
-<p class="p34"><span class="s12">Chaque samedi, 2 heures de coaching intensif en ligne sur Zoom ou StreamYard. Papa Diouf en direct avec toi.</span></p>
-<p class="p35"><span class="s16">✦</span><span class="s12"> Tous les samedis</span></p>
-<p class="p33"><span class="s12">02</span></p>
-<p class="p21"><span class="s12">Groupe WhatsApp Privé</span></p>
-<p class="p34"><span class="s12">Accès immédiat après paiement. Posez vos questions, partagez vos progrès, restez connectés entre les sessions.</span></p>
-<p class="p35"><span class="s16">✦</span><span class="s12"> Accès immédiat</span></p>
-<p class="p33"><span class="s12">03</span></p>
-<p class="p21"><span class="s12">Matériaux de Lecture</span></p>
-<p class="p34"><span class="s12">Livres, guides et ressources soigneusement sélectionnés par Papa Diouf pour aller plus loin entre chaque session.</span></p>
-<p class="p35"><span class="s16">✦</span><span class="s12"> Envoyés après paiement</span></p>
-<p class="p33"><span class="s12">04</span></p>
-<p class="p21"><span class="s12">Coaching en Profondeur</span></p>
-<p class="p34"><span class="s12">Pas de survol. Chaque session va en profondeur sur des concepts qui changent réellement ta façon de penser et d'agir.</span></p>
-<p class="p35"><span class="s16">✦</span><span class="s12"> Contenu exclusif</span></p>
-<p class="p33"><span class="s12">05</span></p>
-<p class="p21"><span class="s12">Q&amp;R en Direct</span></p>
-<p class="p34"><span class="s12">Pose tes vraies questions, reçois des réponses personnalisées. Papa Diouf répond à ta situation spécifique.</span></p>
-<p class="p35"><span class="s16">✦</span><span class="s12"> Accès direct au coach</span></p>
-<p class="p33"><span class="s12">06</span></p>
-<p class="p21"><span class="s12">Une Communauté de Champions</span></p>
-<p class="p34"><span class="s12">Rejoins des entrepreneurs et des leaders qui refusent la médiocrité. L'entourage transforme le destin.</span></p>
-<p class="p35"><span class="s16">✦</span><span class="s12"> Réseau pour la vie</span></p>
-<p class="p36"><span class="s12">Le Programme des </span><span class="s13">4 Semaines</span></p>
-<p class="p37"><span class="s6">SEMAINE 1</span></p>
-<p class="p38"><span class="s6">Connais-toi toi-même</span></p>
-<p class="p39"><span class="s6">Identification de tes croyances limitantes. Comprendre d'où tu viens pour choisir où tu vas. Les fondations d'un mindset de champion.</span></p>
-<p class="p37"><span class="s6">SEMAINE 2</span></p>
-<p class="p38"><span class="s6">Brise les Barrières</span></p>
-<p class="p39"><span class="s6">Écraser la peur, la procrastination et le doute. Reprogrammer ton dialogue intérieur. Construire une confiance inébranlable.</span></p>
-<p class="p37"><span class="s6">SEMAINE 3</span></p>
-<p class="p38"><span class="s6">Pense comme un Leader</span></p>
-<p class="p39"><span class="s6">Vision, responsabilité, discipline. Les habitudes mentales des entrepreneurs qui réussissent. Décider avec clarté, agir avec courage.</span></p>
-<p class="p37"><span class="s6">SEMAINE 4</span></p>
-<p class="p38"><span class="s6">Passe à l'Action</span></p>
-<p class="p39"><span class="s6">Transformer la transformation en résultats concrets. Créer un plan d'action personnel. Les systèmes pour maintenir ton nouveau niveau.</span></p>
-<img src="/images/papa-diouf.jpg" alt="Papa Diouf" style="width:100%;height:100%;object-fit:cover;display:block;">
-<p class="p28"><span class="s6">PAPA DIOUF</span></p>
-<p class="p28"><span class="s14">TON COACH</span></p>
-<h2 style="margin: 0.0px 0.0px 18.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c"><span class="s15">Papa Diouf —</span><span class="s5"><br>
-</span><span class="s14">Business Strategist/ Dev personnel</span></h2>
-<p class="p41"><span class="s14">Publicitaire, copywriter, ingénieur logiciel, coach d'affaires, entrepreneur — Papa Diouf a consacré plus de deux décennies à comprendre pourquoi certaines personnes réussissent et d'autres non.</span></p>
-<p class="p41"><span class="s14">Basé au Sénégal, avec une vision globale et des clients sur plusieurs continents, Papa a aidé des centaines d'entrepreneurs à dépasser leurs blocages mentaux et à construire des entreprises qui reflètent leur vrai potentiel.</span></p>
-<p class="p41"><span class="s14">Sa conviction profonde, nourrie par Rumi et des décennies d'expérience : quand tu maîtrises ton esprit, tout le reste devient possible.</span></p>
-<p class="p42"><span class="s14">40+</span></p>
-<p class="p43"><span class="s14">ANS EN BUSINESS</span></p>
-<p class="p42"><span class="s14">200+</span></p>
-<p class="p43"><span class="s14">PERSONNES COACHÉES</span></p>
-<p class="p42"><span class="s14">5+</span></p>
-<p class="p43"><span class="s14">DOMAINES D'EXPERTISE</span></p>
-<blockquote style="margin: 0.0px 0.0px 21.6px 0.0px; font: 13.8px 'Helvetica Neue'; color: #e2bf67; -webkit-text-stroke: #e2bf67"><span class="s14">« La blessure est l'endroit par où la lumière entre en toi. »</span></blockquote>
-<blockquote style="margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #75756d; -webkit-text-stroke: #75756d"><span class="s14">— RUMI</span></blockquote>
-<p class="p17"><span class="s12">TÉMOIGNAGES</span></p>
-<h2 style="margin: 0.0px 0.0px 14.4px 0.0px; text-align: center; font: 36.0px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2"><span class="s12">Ils ont </span><span class="s13">osé changer.</span><span class="s2"><br>
-</span><span class="s12">Voici leurs résultats.</span></h2>
-<p class="p44"><span class="s12">★★★★★</span></p>
-<p class="p45"><span class="s12">« J'avais toutes les connaissances mais je n'agissais pas. Papa m'a aidé à voir que le problème était dans ma tête. En 4 semaines, j'ai lancé mon business que j'avais repoussé depuis 2 ans. »</span></p>
-<p class="p46"><span class="s12">AMINATA S.</span></p>
-<p class="p24"><span class="s12">Entrepreneuse, Dakar</span></p>
-<p class="p44"><span class="s12">★★★★★</span></p>
-<p class="p45"><span class="s12">« Le coaching de groupe avec Papa, c'est différent. Il ne te donne pas juste des conseils — il te challenge. J'ai compris des choses sur moi-même que je n'aurais jamais vues seul. »</span></p>
-<p class="p46"><span class="s12">OUMAR D.</span></p>
-<p class="p24"><span class="s12">Directeur Commercial, Sénégal</span></p>
-<p class="p44"><span class="s12">★★★★★</span></p>
-<p class="p45"><span class="s12">« 5 000 FCFA pour une transformation pareille ? C'est le meilleur investissement que j'aie jamais fait. Ma façon de penser a complètement changé. Mes résultats aussi. »</span></p>
-<p class="p46"><span class="s12">FATOU M.</span></p>
-<p class="p24"><span class="s12">Consultante, Dakar</span></p>
-<p class="p28"><span class="s14">REJOINDRE LA MINDSET ACADEMY</span></p>
-<h2 style="margin: 0.0px 0.0px 18.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c"><span class="s15">Prêt à </span><span class="s14">tout changer</span><span class="s15"> ?</span></h2>
-<p class="p47"><span class="s14">Une décision. Un paiement. Une transformation de 4 semaines qui peut changer le reste de ta vie.</span></p>
-<ul class="ul1">
-  <li class="li48"><span class="s17"></span><span class="s14">4 sessions live de 2h chaque samedi (Zoom / StreamYard)</span><span class="s18"> </span><span class="s14">Accès immédiat au groupe WhatsApp privé après paiement</span><span class="s18"> </span><span class="s14">Matériaux de lecture &amp; livres sélectionnés par Papa Diouf</span><span class="s18"> </span><span class="s14">Q&amp;R en direct avec Papa Diouf à chaque session</span><span class="s18"> </span><span class="s14">Communauté d'entrepreneurs et leaders engagés</span><span class="s18"> </span><span class="s14">Contenu exclusif sur le mindset &amp; la performance</span></li>
-</ul>
-<p class="p32"><span class="s6">INVESTISSEMENT TOTAL (4 SEMAINES)</span></p>
-<p class="p49"><span class="s6">5 000 FCFA</span></p>
-<p class="p50"><span class="s6">Paiement unique via Wave</span></p>
-<p class="p51"><span class="s6">🌊</span></p>
-<p class="p52"><span class="s19">✦</span><span class="s14"> Places limitées — Le groupe reste petit pour garantir une vraie transformation</span><span class="s2"><br>
-</span><span class="s19">✦</span><span class="s14"> Après paiement, tu reçois un lien WhatsApp et tes matériaux dans les 24h</span></p>
-<p class="p53"><span class="s20">PD</span></p>
-<p class="p21"><span class="s6">Paiement PayDunya</span></p>
-<p class="p43"><span class="s6">Carte · Mobile Money · Wave · Orange Money</span></p>
-<p class="p54"><span class="s21">MONTANT À PAYER</span></p>
-<p class="p55"><span class="s21">5 000 FCFA</span></p>
-<p class="p24"><span class="s6">PRÉNOM &amp; NOM</span></p>
-<p class="p24"><span class="s6">NUMÉRO WAVE (AVEC INDICATIF)</span></p>
-<p class="p24"><span class="s6">EMAIL</span></p>
-<p class="p24"><span class="s6">TON ACTIVITÉ / DOMAINE</span></p>
-<p class="p56"><span class="s22">🔐</span></p>
-<p class="p57"><span class="s22">PAYER 5 000 FCFA — PAYDUNYA</span></p>
-<p class="p58"><span class="s6">🔒</span></p>
-<p class="p43"><span class="s6">Paiement 100% sécurisé · Wave · Orange Money · Carte bancaire</span></p>
-<p class="p59"><span class="s6">En procédant au paiement, tu acceptes nos conditions et confirmes que tu es prêt(e) à t'engager pleinement dans ce coaching.</span></p>
-<p class="p17"><span class="s12">QUESTIONS FRÉQUENTES</span></p>
-<h2 style="margin: 0.0px 0.0px 14.4px 0.0px; text-align: center; font: 36.0px 'Helvetica Neue'; color: #bc993c; -webkit-text-stroke: #bc993c"><span class="s23">Tu as des </span><span class="s12">questions ?</span></h2>
-<p class="p61"><span class="s12">C'est quoi exactement la Mindset Academy ?</span></p>
-<p class="p62"><span class="s12">+</span></p>
-<p class="p61"><span class="s12">Comment se déroulent les sessions ?</span></p>
-<p class="p62"><span class="s12">+</span></p>
-<p class="p61"><span class="s12">Qu'est-ce que je reçois après paiement ?</span></p>
-<p class="p62"><span class="s12">+</span></p>
-<p class="p61"><span class="s12">Ce coaching est-il fait pour moi ?</span></p>
-<p class="p62"><span class="s12">+</span></p>
-<p class="p61"><span class="s12">Pourquoi 5 000 FCFA seulement ?</span></p>
-<p class="p62"><span class="s12">+</span></p>
-<p class="p61"><span class="s12">Comment payer avec Wave ?</span></p>
-<p class="p62"><span class="s12">+</span></p>
-<p class="p17"><span class="s14">DERNIÈRE CHANCE</span></p>
-<h2 style="margin: 0.0px 56.0px 18.0px 56.0px; text-align: center; text-indent: -56.0px; font: 36.0px 'Helvetica Neue'; color: #f2ece2; -webkit-text-stroke: #f2ece2"><span class="s14">Les places se </span><span class="s24">remplissent vite.</span><span class="s2"><br>
-</span><span class="s14">Et toi, tu attends quoi ?</span></h2>
-<p class="p64"><span class="s14">Pour le prix d'un bon repas, tu peux transformer ta façon de penser — et donc toute ta vie.</span></p>
-<p class="p65"><span class="s25">⏰</span><span class="s14"> Prochaine session : </span><span class="s24">Ce Samedi</span></p>
-<p class="p66"><span class="s26">JE REJOINS LA MINDSET ACADEMY — 5 000 FCFA</span></p>
-<p class="p67"><span class="s14">PAIEMENT WAVE · ACCÈS WHATSAPP IMMÉDIAT · PLACES LIMITÉES</span></p>
-<p class="p68"><span class="s12">MINDSET ACADEMY · PAPA DIOUF</span></p>
-<p class="p10"><span class="s12">LA PHILOSOPHIE</span></p>
-<p class="p10"><span class="s12">LE PROGRAMME</span></p>
-<p class="p10"><span class="s12">TON COACH</span></p>
-<p class="p10"><span class="s12">FAQ</span></p>
-<p class="p10"><span class="s12">REJOINDRE</span></p>
-<p class="p69"><span class="s12">© 2026 Papa Diouf. Tous droits réservés.</span></p>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <span class="nav-logo-top">Mindset Academy</span>
+    <span class="nav-logo-sub">avec Papa Diouf</span>
+  </div>
+  <a href="#paiement" class="nav-cta">Rejoindre — 5 000 FCFA</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div>
+    <div class="hero-badge">
+      <div class="badge-dot"></div>
+      Coaching de groupe — Chaque Samedi en ligne
+    </div>
+    <h1>Mindset<br><em>Academy</em></h1>
+    <p class="hero-sub-title">« Maîtrise ton esprit. Atteins tous tes objectifs. »</p>
+    <p class="hero-hook">
+      Tu connais les stratégies. Tu travailles dur. Mais quelque chose te bloque.<br>
+      <strong>La vérité ? C'est à 95% une question de mental.</strong><br>
+      Rejoins le coaching de groupe qui va tout changer.
+    </p>
+
+    <div class="hero-stat-bar">
+      <div class="h-stat">
+        <div class="h-stat-num">4</div>
+        <div class="h-stat-label">Semaines</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-num">2h</div>
+        <div class="h-stat-label">Par session</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-num">∞</div>
+        <div class="h-stat-label">Transformation</div>
+      </div>
+    </div>
+
+    <div class="hero-price-pill">
+      <div>
+        <div class="price-label">Investissement total</div>
+        <div class="price-amount">5 000 <small style="font-size:1.2rem">FCFA</small></div>
+      </div>
+      <div style="width:1px;height:50px;background:rgba(201,168,76,0.2)"></div>
+      <div>
+        <div class="price-label">Paiement via</div>
+        <div style="font-size:1rem;font-weight:600;color:#F97316;">PayDunya 🔐</div>
+        <div class="price-period">Wave · Orange Money · Carte</div>
+      </div>
+    </div>
+
+    <div class="hero-cta-group">
+      <a href="#paiement" class="btn-main">Je Rejoins la Mindset Academy →</a>
+      <p class="hero-guarantee">✦ <span>Places limitées</span> — Accès immédiat au groupe WhatsApp après paiement</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Maîtrise ton mental</span><span class="sep">✦</span>
+    <span>95% Mindset · 5% Stratégie</span><span class="sep">✦</span>
+    <span>Pense comme un champion</span><span class="sep">✦</span>
+    <span>Arrête de survivre. Commence à vivre.</span><span class="sep">✦</span>
+    <span>Élève tes standards</span><span class="sep">✦</span>
+    <span>Maîtrise ton mental</span><span class="sep">✦</span>
+    <span>95% Mindset · 5% Stratégie</span><span class="sep">✦</span>
+    <span>Pense comme un champion</span><span class="sep">✦</span>
+    <span>Arrête de survivre. Commence à vivre.</span><span class="sep">✦</span>
+    <span>Élève tes standards</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- DOULEUR -->
+<section class="douleur" id="problemes">
+  <div class="container">
+    <div class="douleur-intro">
+      <div class="section-tag" style="justify-content:center">Le Vrai Problème</div>
+      <h2>Tu travailles dur.<br>Mais <em>ça ne suffit pas.</em></h2>
+      <p class="lead">Si tu te reconnais dans l'un de ces scénarios, ce coaching est fait pour toi.</p>
+    </div>
+    <div class="douleur-grid">
+      <div class="douleur-card">
+        <div class="douleur-icon">😔</div>
+        <div class="douleur-title">Tu te sabotes sans t'en rendre compte</div>
+        <p class="douleur-desc">Tu commences des projets, tu ne les termines pas. Tu procrastines. Tu sais quoi faire, mais tu ne le fais pas. Ce n'est pas de la paresse — c'est un problème de mental.</p>
+      </div>
+      <div class="douleur-card">
+        <div class="douleur-icon">😰</div>
+        <div class="douleur-title">Tu as peur sans savoir de quoi</div>
+        <p class="douleur-desc">La peur de l'échec. La peur du jugement. La peur de ne pas être assez bon. Ces peurs invisibles te maintiennent exactement là où tu es.</p>
+      </div>
+      <div class="douleur-card">
+        <div class="douleur-icon">😤</div>
+        <div class="douleur-title">Tu es plein de bonnes intentions mais peu de résultats</div>
+        <p class="douleur-desc">Tu suis des formations, tu regardes des vidéos, tu lis des livres. Mais les résultats ne suivent pas. Parce que la connaissance sans le bon état d'esprit ne mène nulle part.</p>
+      </div>
+      <div class="douleur-card">
+        <div class="douleur-icon">😞</div>
+        <div class="douleur-title">Tu te compares aux autres et tu perds confiance</div>
+        <p class="douleur-desc">Tu vois les succès des autres sur les réseaux et tu te demandes ce qui ne va pas chez toi. Ce cycle de comparaison détruit ta motivation et ton identité de leader.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPT 95/5 -->
+<section class="concept" id="concept">
+  <div class="container">
+    <div class="concept-inner">
+      <div class="concept-visual">
+        <div class="donut-wrap">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#1A1A1A" stroke-width="28"/>
+            <!-- 95% arc -->
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#C9A84C" stroke-width="28"
+              stroke-dasharray="478 502" stroke-dashoffset="0" stroke-linecap="butt"/>
+            <!-- 5% arc -->
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#1A73E8" stroke-width="28"
+              stroke-dasharray="25 502" stroke-dashoffset="-478" stroke-linecap="butt"/>
+          </svg>
+          <div class="donut-center">
+            <div class="donut-pct">95%</div>
+            <div class="donut-sub">Mindset</div>
+          </div>
+        </div>
+        <div class="concept-legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background:var(--or)"></div>
+            <span><strong style="color:var(--blanc)">95%</strong> — Mindset &amp; Mental</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#1A73E8"></div>
+            <span><strong style="color:var(--blanc)">5%</strong> — Stratégies &amp; Tactiques</span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-text">
+        <div class="section-tag">La Philosophie</div>
+        <h2>Le succès, c'est<br><em>d'abord dans la tête</em></h2>
+        <p>La plupart des gens cherchent la prochaine stratégie, le prochain hack, la prochaine formation. Mais <strong>les stratégies sans le bon mental ne fonctionnent pas.</strong></p>
+        <p>Regarde autour de toi : deux personnes avec les mêmes ressources, les mêmes informations — l'une réussit, l'autre échoue. La différence ? <strong>Ce qui se passe dans leur tête.</strong></p>
+        <blockquote class="rumi">
+          « Hier, j'étais intelligent, alors je voulais changer le monde. Aujourd'hui, je suis sage, alors je me change moi-même. »
+          <cite>— Rumi</cite>
+        </blockquote>
+        <p>La Mindset Academy n'est pas une formation de plus. C'est <strong>une transformation de l'intérieur</strong>, qui rend toutes tes autres stratégies enfin efficaces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE -->
+<section class="offre" id="offre">
+  <div class="container">
+    <div class="offre-header">
+      <div class="section-tag" style="justify-content:center">Ce Que Tu Obtiens</div>
+      <h2>Tout ce qui est<br><em>inclus</em> dans ta place</h2>
+    </div>
+    <div class="offre-grid">
+      <div class="offre-card">
+        <div class="offre-num">01</div>
+        <div class="offre-title">4 Sessions Live de 2h</div>
+        <p class="offre-desc">Chaque samedi, 2 heures de coaching intensif en ligne sur Zoom ou StreamYard. Papa Diouf en direct avec toi.</p>
+        <div class="offre-check">✦ Tous les samedis</div>
+      </div>
+      <div class="offre-card">
+        <div class="offre-num">02</div>
+        <div class="offre-title">Groupe WhatsApp Privé</div>
+        <p class="offre-desc">Accès immédiat après paiement. Posez vos questions, partagez vos progrès, restez connectés entre les sessions.</p>
+        <div class="offre-check">✦ Accès immédiat</div>
+      </div>
+      <div class="offre-card">
+        <div class="offre-num">03</div>
+        <div class="offre-title">Matériaux de Lecture</div>
+        <p class="offre-desc">Livres, guides et ressources soigneusement sélectionnés par Papa Diouf pour aller plus loin entre chaque session.</p>
+        <div class="offre-check">✦ Envoyés après paiement</div>
+      </div>
+      <div class="offre-card">
+        <div class="offre-num">04</div>
+        <div class="offre-title">Coaching en Profondeur</div>
+        <p class="offre-desc">Pas de survol. Chaque session va en profondeur sur des concepts qui changent réellement ta façon de penser et d'agir.</p>
+        <div class="offre-check">✦ Contenu exclusif</div>
+      </div>
+      <div class="offre-card">
+        <div class="offre-num">05</div>
+        <div class="offre-title">Q&amp;R en Direct</div>
+        <p class="offre-desc">Pose tes vraies questions, reçois des réponses personnalisées. Papa Diouf répond à ta situation spécifique.</p>
+        <div class="offre-check">✦ Accès direct au coach</div>
+      </div>
+      <div class="offre-card">
+        <div class="offre-num">06</div>
+        <div class="offre-title">Une Communauté de Champions</div>
+        <p class="offre-desc">Rejoins des entrepreneurs et des leaders qui refusent la médiocrité. L'entourage transforme le destin.</p>
+        <div class="offre-check">✦ Réseau pour la vie</div>
+      </div>
+    </div>
+
+    <!-- Programme -->
+    <div style="margin-top:4rem">
+      <p class="programme-title">Le Programme des <em>4 Semaines</em></p>
+      <div class="semaines">
+        <div class="semaine">
+          <div class="semaine-num">Semaine 1</div>
+          <div class="semaine-theme">Connais-toi toi-même</div>
+          <p class="semaine-desc">Identification de tes croyances limitantes. Comprendre d'où tu viens pour choisir où tu vas. Les fondations d'un mindset de champion.</p>
+        </div>
+        <div class="semaine">
+          <div class="semaine-num">Semaine 2</div>
+          <div class="semaine-theme">Brise les Barrières</div>
+          <p class="semaine-desc">Écraser la peur, la procrastination et le doute. Reprogrammer ton dialogue intérieur. Construire une confiance inébranlable.</p>
+        </div>
+        <div class="semaine">
+          <div class="semaine-num">Semaine 3</div>
+          <div class="semaine-theme">Pense comme un Leader</div>
+          <p class="semaine-desc">Vision, responsabilité, discipline. Les habitudes mentales des entrepreneurs qui réussissent. Décider avec clarté, agir avec courage.</p>
+        </div>
+        <div class="semaine">
+          <div class="semaine-num">Semaine 4</div>
+          <div class="semaine-theme">Passe à l'Action</div>
+          <p class="semaine-desc">Transformer la transformation en résultats concrets. Créer un plan d'action personnel. Les systèmes pour maintenir ton nouveau niveau.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A PROPOS -->
+<section class="apropos" id="apropos">
+  <div class="container">
+    <div class="apropos-inner">
+      <div class="apropos-portrait">
+        <div class="initiales">PD</div>
+        <div class="apropos-name">Papa Diouf</div>
+      </div>
+      <div class="apropos-content">
+        <div class="section-tag">Ton Coach</div>
+        <h2>Papa Diouf —<br><em>40 ans d'expérience</em></h2>
+        <p>Publicitaire, copywriter, ingénieur logiciel, coach d'affaires, entrepreneur — Papa Diouf a consacré plus de quatre décennies à comprendre pourquoi certaines personnes réussissent et d'autres non.</p>
+        <p>Basé au Sénégal, avec une vision globale et des clients sur plusieurs continents, Papa a aidé des centaines d'entrepreneurs à dépasser leurs blocages mentaux et à construire des entreprises qui reflètent leur vrai potentiel.</p>
+        <p>Sa conviction profonde, nourrie par Rumi et des décennies d'expérience : <strong>quand tu maîtrises ton esprit, tout le reste devient possible.</strong></p>
+        <div class="apropos-stats">
+          <div><div class="a-stat-n">40+</div><div class="a-stat-l">Ans en business</div></div>
+          <div><div class="a-stat-n">200+</div><div class="a-stat-l">Personnes coachées</div></div>
+          <div><div class="a-stat-n">5+</div><div class="a-stat-l">Domaines d'expertise</div></div>
+        </div>
+        <blockquote class="rumi">
+          « La blessure est l'endroit par où la lumière entre en toi. »
+          <cite>— Rumi</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMOIGNAGES -->
+<section class="temoignages" id="temoignages">
+  <div class="container">
+    <div class="testi-header">
+      <div class="section-tag" style="justify-content:center">Témoignages</div>
+      <h2>Ils ont <em>osé changer.</em><br>Voici leurs résultats.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">« J'avais toutes les connaissances mais je n'agissais pas. Papa m'a aidé à voir que le problème était dans ma tête. En 4 semaines, j'ai lancé mon business que j'avais repoussé depuis 2 ans. »</p>
+        <div class="testi-author"><strong>Aminata S.</strong><span>Entrepreneuse, Dakar</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">« Le coaching de groupe avec Papa, c'est différent. Il ne te donne pas juste des conseils — il te challenge. J'ai compris des choses sur moi-même que je n'aurais jamais vues seul. »</p>
+        <div class="testi-author"><strong>Oumar D.</strong><span>Directeur Commercial, Sénégal</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">« 5 000 FCFA pour une transformation pareille ? C'est le meilleur investissement que j'aie jamais fait. Ma façon de penser a complètement changé. Mes résultats aussi. »</p>
+        <div class="testi-author"><strong>Fatou M.</strong><span>Consultante, Dakar</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIEMENT -->
+<section class="paiement" id="paiement">
+  <div class="container">
+    <div class="paiement-inner">
+      <div class="paiement-left">
+        <div class="section-tag">Rejoindre la Mindset Academy</div>
+        <h2>Prêt à <em>tout changer</em> ?</h2>
+        <p class="lead">Une décision. Un paiement. Une transformation de 4 semaines qui peut changer le reste de ta vie.</p>
+
+        <ul class="recap-list">
+          <li>4 sessions live de 2h chaque samedi (Zoom / StreamYard)</li>
+          <li>Accès immédiat au groupe WhatsApp privé après paiement</li>
+          <li>Matériaux de lecture &amp; livres sélectionnés par Papa Diouf</li>
+          <li>Q&amp;R en direct avec Papa Diouf à chaque session</li>
+          <li>Communauté d'entrepreneurs et leaders engagés</li>
+          <li>Contenu exclusif sur le mindset &amp; la performance</li>
+        </ul>
+
+        <div class="total-box">
+          <div>
+            <div class="total-label">Investissement total (4 semaines)</div>
+            <div class="total-price">5 000 FCFA</div>
+            <div class="total-note">Paiement unique via Wave</div>
+          </div>
+          <div style="font-size:2rem">🌊</div>
+        </div>
+
+        <p style="font-size:0.78rem;color:var(--gris);line-height:1.6">
+          ✦ Places limitées — Le groupe reste petit pour garantir une vraie transformation<br>
+          ✦ Après paiement, tu reçois un lien WhatsApp et tes matériaux dans les 24h
+        </p>
+      </div>
+
+      <!-- WAVE PAYMENT FORM -->
+      <div class="wave-box" id="wave-form">
+        <div class="wave-logo">
+          <div class="wave-icon" style="background:#F97316;font-size:0.85rem;letter-spacing:-0.03em;">PD</div>
+          <div>
+            <div class="wave-logo-text">Paiement PayDunya</div>
+            <div class="wave-logo-sub">Carte · Mobile Money · Wave · Orange Money</div>
+          </div>
+        </div>
+
+        <div class="wave-amount-display">
+          <div class="wave-amount-label">Montant à payer</div>
+          <div class="wave-amount-val">5 000 FCFA</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Prénom &amp; Nom</label>
+          <input class="form-input" type="text" id="nom" placeholder="Ex: Aminata Diallo" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Numéro Wave (avec indicatif)</label>
+          <input class="form-input" type="tel" id="phone" placeholder="Ex: +221 77 000 00 00" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input class="form-input" type="email" id="email" placeholder="ton@email.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Ton activité / domaine</label>
+          <input class="form-input" type="text" id="activite" placeholder="Ex: Entrepreneur, Commerçant, Manager..." />
+        </div>
+
+        <div id="wave-msg" style="display:none;padding:0.8rem;margin-bottom:1rem;font-size:0.82rem;"></div>
+
+        <button class="btn-wave" id="wave-btn" onclick="lancerPaiement()">
+          <span>🔐</span>
+          <span id="wave-btn-text">Payer 5 000 FCFA — PayDunya</span>
+        </button>
+
+        <div class="wave-security">
+          <span>🔒</span>
+          <span>Paiement 100% sécurisé · Wave · Orange Money · Carte bancaire</span>
+        </div>
+
+        <p style="font-size:0.65rem;color:rgba(136,136,128,0.45);margin-top:1rem;text-align:center;line-height:1.5">
+          En procédant au paiement, tu acceptes nos conditions et confirmes que tu es prêt(e) à t'engager pleinement dans ce coaching.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-tag" style="justify-content:center">Questions Fréquentes</div>
+      <h2>Tu as des <em>questions ?</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          C'est quoi exactement la Mindset Academy ?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Un coaching de groupe en ligne avec Papa Diouf, tous les samedis pendant 4 semaines. 2 heures de session live par semaine, avec des matériaux de lecture, un groupe WhatsApp privé et un accès direct au coach. Le focus est à 95% sur le mental et à 5% sur les stratégies.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Comment se déroulent les sessions ?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Les sessions se font en ligne via Zoom ou StreamYard, chaque samedi. Après paiement, tu reçois un lien pour rejoindre le groupe WhatsApp où tous les détails (heure, lien de session) sont partagés.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Qu'est-ce que je reçois après paiement ?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Dans les 24h suivant ton paiement : un lien pour rejoindre le groupe WhatsApp privé de la Mindset Academy, ainsi que tes premiers matériaux de lecture. Tu seras également notifié(e) de la date et l'heure de la prochaine session.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Ce coaching est-il fait pour moi ?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Ce coaching est pour les entrepreneurs, les commerciaux, les managers, les professionnels et toute personne ambitieuse qui veut passer au niveau supérieur. Si tu travailles dur mais que quelque chose te bloque, ce coaching est fait pour toi.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Pourquoi 5 000 FCFA seulement ?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Papa Diouf croit que la transformation ne devrait pas être réservée à ceux qui ont beaucoup d'argent. L'objectif est de rendre ce coaching accessible au plus grand nombre, tout en maintenant une qualité et une profondeur exceptionnelles.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Comment payer avec Wave ?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Remplis le formulaire ci-dessus avec tes informations. Clique sur "Payer avec Wave". Tu recevras une notification Wave sur ton téléphone à confirmer. Une fois le paiement confirmé, nous te contacterons pour l'accès au groupe.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="cta">
+  <div class="section-tag" style="justify-content:center">Dernière Chance</div>
+  <h2>Les places se <em>remplissent vite.</em><br>Et toi, tu attends quoi ?</h2>
+  <p class="lead">Pour le prix d'un bon repas, tu peux transformer ta façon de penser — et donc toute ta vie.</p>
+  <div style="margin-bottom:2rem;font-size:0.85rem;color:var(--gris)">⏰ Prochaine session : <strong style="color:var(--or)">Ce Samedi</strong></div>
+  <a href="#paiement" class="btn-main">Je Rejoins la Mindset Academy — 5 000 FCFA</a>
+  <p style="margin-top:1.5rem;font-size:0.72rem;color:rgba(136,136,128,0.5);letter-spacing:0.1em;text-transform:uppercase">Paiement Wave · Accès WhatsApp immédiat · Places limitées</p>
+</section>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <div class="modal-icon">🎉</div>
+    <h3>Bienvenue dans la<br><em>Mindset Academy !</em></h3>
+    <p>Ton paiement est en cours de traitement. Voici ce qui se passe maintenant :</p>
+    <ul class="modal-steps">
+      <li>Tu reçois une confirmation Wave sur ton téléphone</li>
+      <li>Dans les 24h, tu reçois le lien du groupe WhatsApp privé</li>
+      <li>Tes matériaux de lecture te seront envoyés par email</li>
+      <li>Papa Diouf te souhaite la bienvenue personnellement dans le groupe</li>
+    </ul>
+    <button class="btn-modal" onclick="fermerModal()">Parfait, j'ai compris ! ✦</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">Mindset Academy · Papa Diouf</div>
+  <div class="f-links">
+    <a href="#concept">La Philosophie</a>
+    <a href="#offre">Le Programme</a>
+    <a href="#apropos">Ton Coach</a>
+    <a href="#faq">FAQ</a>
+    <a href="#paiement">Rejoindre</a>
+  </div>
+  <div class="f-copy">© 2026 Papa Diouf. Tous droits réservés.</div>
+</footer>
+
+<script>
+// ── PAYDUNYA PAYMENT INTEGRATION ──────────────────────────────────────────────
+// All API keys live in server.js via .env — ZERO secrets in this file.
+// This frontend only calls our own backend endpoint: /api/paydunya/checkout
+
+async function lancerPaiement() {
+  const nom      = document.getElementById('nom').value.trim();
+  const phone    = document.getElementById('phone').value.trim();
+  const email    = document.getElementById('email').value.trim();
+  const activite = document.getElementById('activite').value.trim();
+
+  // ── Client-side validation ────────────────────────────────────────────────
+  if (!nom || !phone || !email) {
+    afficherMsg('error', '⚠ Merci de remplir tous les champs obligatoires (nom, téléphone, email).');
+    return;
+  }
+  if (!email.includes('@') || !email.includes('.')) {
+    afficherMsg('error', '⚠ Merci d\'entrer une adresse email valide.');
+    return;
+  }
+
+  const btn = document.getElementById('wave-btn');
+  document.getElementById('wave-btn-text').textContent = 'Création de la facture...';
+  btn.classList.add('loading');
+  afficherMsg('info', '⏳ Connexion à PayDunya en cours...');
+
+  try {
+    // ── Call our secure backend (keys never leave the server) ──────────────
+    const response = await fetch('/api/paydunya/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        customerName:  nom,
+        customerEmail: email,
+        customerPhone: phone,
+        activity:      activite,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Erreur serveur (' + response.status + ')');
+    }
+
+    if (!data.invoiceUrl) {
+      throw new Error('URL de paiement manquante dans la réponse.');
+    }
+
+    // ── Redirect to PayDunya hosted payment page ───────────────────────────
+    afficherMsg('info', '✅ Facture créée ! Redirection vers PayDunya...');
+    setTimeout(() => { window.location.href = data.invoiceUrl; }, 800);
+
+  } catch (err) {
+    console.error('PayDunya error:', err);
+    document.getElementById('wave-btn-text').textContent = 'Payer 5 000 FCFA — PayDunya';
+    btn.classList.remove('loading');
+    afficherMsg('error', '❌ ' + (err.message || 'Problème de connexion. Réessaie ou contacte-nous sur WhatsApp.'));
+  }
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function afficherMsg(type, msg) {
+  const el = document.getElementById('wave-msg');
+  if (!msg) { el.style.display = 'none'; return; }
+  const styles = {
+    error: { bg: 'rgba(192,57,43,0.15)', border: '1px solid rgba(192,57,43,0.3)', color: '#E74C3C' },
+    info:  { bg: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.2)', color: '#C9A84C' },
+  };
+  const s = styles[type] || styles.info;
+  el.style.cssText = `display:block;background:${s.bg};border:${s.border};color:${s.color};padding:0.8rem;margin-bottom:1rem;font-size:0.82rem;border-radius:2px;`;
+  el.textContent = msg;
+}
+
+function ouvrirModal() { document.getElementById('modal').classList.add('active'); }
+function fermerModal() { document.getElementById('modal').classList.remove('active'); }
+document.getElementById('modal').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modal')) fermerModal();
+});
+
+// ── FAQ Toggle ────────────────────────────────────────────────────────────────
+function toggleFaq(btn) {
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) {
+    btn.classList.add('open');
+    btn.nextElementSibling.classList.add('open');
+  }
+}
+
+// ── Smooth Scroll ─────────────────────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>
