@@ -29,6 +29,20 @@
   .steps li::before { content:'✦'; color:var(--or); font-size:0.55rem; margin-top:0.35rem; flex-shrink:0; }
   .btn { display:inline-block; background:var(--or); color:var(--noir); border:none; padding:0.9rem 2.5rem; font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; cursor:pointer; text-decoration:none; margin-top:0.5rem; transition:background 0.3s; }
   .btn:hover { background:var(--or-clair); }
+  .btn-whatsapp {
+    display:flex; align-items:center; justify-content:center; gap:0.8rem;
+    background:#25D366; color:#fff; border:none;
+    padding:1.1rem 2rem; font-family:'DM Sans',sans-serif;
+    font-size:0.95rem; font-weight:600; letter-spacing:0.05em;
+    cursor:pointer; text-decoration:none; width:100%;
+    transition:background 0.3s; margin-bottom:0.8rem;
+    animation: pulse-green 2s ease-in-out infinite;
+  }
+  .btn-whatsapp:hover { background:#1ebe5c; animation:none; }
+  @keyframes pulse-green {
+    0%,100%{ box-shadow:0 0 0 0 rgba(37,211,102,0.4); }
+    50%     { box-shadow:0 0 0 10px rgba(37,211,102,0); }
+  }
   .divider { width:60px; height:1px; background:rgba(201,168,76,0.3); margin:1.5rem auto; }
 </style>
 </head>
@@ -39,14 +53,19 @@
   <h1>Bienvenue dans la<br><em>Mindset Academy !</em></h1>
   <p>Ton paiement de <strong style="color:var(--blanc)">5 000 FCFA</strong> a bien été reçu. Tu fais maintenant partie de la communauté des champions.</p>
   <div class="divider"></div>
+  <!-- WhatsApp CTA — primary action -->
+  <a href="https://chat.whatsapp.com/JQPyRWkS1hVJpggG4cRrBD?s=sh&p=i&mlu=4&ilr=4" target="_blank" rel="noopener" class="btn-whatsapp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.868a.5.5 0 00.614.612l6.083-1.516A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.019-1.378l-.36-.214-3.732.93.977-3.646-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+    Rejoindre le Groupe WhatsApp Privé
+  </a>
+
   <ul class="steps">
+    <li>Clique sur le bouton vert ci-dessus pour rejoindre <strong>immédiatement</strong> le groupe</li>
     <li>Tu reçois un email de confirmation dans quelques minutes</li>
-    <li>Dans les <strong>24 heures</strong>, tu recevras le lien du groupe WhatsApp privé</li>
-    <li>Tes matériaux de lecture te seront envoyés par email</li>
+    <li>Tes matériaux de lecture te seront envoyés dans le groupe</li>
     <li>Papa Diouf t'accueillera personnellement dans le groupe</li>
     <li>La prochaine session live est <strong>ce samedi</strong> — sois prêt(e) !</li>
   </ul>
-  <p style="font-size:0.8rem;">Une question ? Contacte-nous directement sur WhatsApp.</p>
   <a href="/" class="btn">Retour à l'accueil ✦</a>
 </div>
 </body>
