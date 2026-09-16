@@ -151,6 +151,11 @@ async function createPaydunyaInvoice({ customerName, customerEmail, customerPhon
       },
       total_amount:  PRODUCT.amount,
       description:   PRODUCT.description,
+      customer: {
+        name:  customerName,
+        email: customerEmail,
+        phone: customerPhone,
+      },
     },
     store: {
       name:     "Mindset Academy",
