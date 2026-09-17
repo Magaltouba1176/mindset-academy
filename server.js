@@ -252,15 +252,6 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // ── Debug endpoint ────────────────────────────────────────────────────────
-  if (pathname === "/api/debug" && method === "GET") {
-    return json(res, 200, {
-      mode: PAYDUNYA.mode,
-      key_prefix: PAYDUNYA.privateKey ? PAYDUNYA.privateKey.substring(0, 20) : "EMPTY",
-      token_prefix: PAYDUNYA.token ? PAYDUNYA.token.substring(0, 8) : "EMPTY",
-    });
-  }
-
   // ── API: Create PayDunya invoice ──────────────────────────────────────────
   if (pathname === "/api/paydunya/checkout" && method === "POST") {
     try {
@@ -272,7 +263,6 @@ const server = http.createServer(async (req, res) => {
       }
 
       console.log(`💳 Creating invoice for: ${customerName} <${customerEmail}>`);
-      console.log(`🔑 DEBUG mode=${PAYDUNYA.mode} key=${PAYDUNYA.privateKey ? PAYDUNYA.privateKey.substring(0,18) : 'EMPTY'} token=${PAYDUNYA.token ? PAYDUNYA.token.substring(0,5) : 'EMPTY'}`);
       const invoice = await createPaydunyaInvoice({ customerName, customerEmail, customerPhone });
 
       return json(res, 200, {
