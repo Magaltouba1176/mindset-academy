@@ -263,6 +263,7 @@ const server = http.createServer(async (req, res) => {
       }
 
       console.log(`💳 Creating invoice for: ${customerName} <${customerEmail}>`);
+      console.log(`🔑 DEBUG mode=${PAYDUNYA.mode} key=${PAYDUNYA.privateKey ? PAYDUNYA.privateKey.substring(0,18) : 'EMPTY'} token=${PAYDUNYA.token ? PAYDUNYA.token.substring(0,5) : 'EMPTY'}`);
       const invoice = await createPaydunyaInvoice({ customerName, customerEmail, customerPhone });
 
       return json(res, 200, {
