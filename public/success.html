@@ -44,29 +44,100 @@
     50%     { box-shadow:0 0 0 10px rgba(37,211,102,0); }
   }
   .divider { width:60px; height:1px; background:rgba(201,168,76,0.3); margin:1.5rem auto; }
+
+  /* Verification state */
+  #state-verifying .spinner {
+    width:48px; height:48px; border:3px solid rgba(201,168,76,0.2);
+    border-top-color:var(--or); border-radius:50%;
+    animation:spin 0.9s linear infinite; margin:0 auto 1.5rem;
+  }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  /* Error state */
+  #state-error { display:none; }
+  #state-error .icon { filter:grayscale(1); }
+
+  /* Success state */
+  #state-success { display:none; }
 </style>
 </head>
 <body>
 <div class="card">
-  <div class="icon">🎉</div>
-  <div class="badge">Paiement Confirmé</div>
-  <h1>Bienvenue dans la<br><em>Mindset Academy !</em></h1>
-  <p>Ton paiement de <strong style="color:var(--blanc)">5 000 FCFA</strong> a bien été reçu. Tu fais maintenant partie de la communauté des champions.</p>
-  <div class="divider"></div>
-  <!-- WhatsApp CTA — primary action -->
-  <a href="https://chat.whatsapp.com/JQPyRWkS1hVJpggG4cRrBD?s=sh&p=i&mlu=4&ilr=4" target="_blank" rel="noopener" class="btn-whatsapp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.868a.5.5 0 00.614.612l6.083-1.516A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.019-1.378l-.36-.214-3.732.93.977-3.646-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
-    Rejoindre le Groupe WhatsApp Privé
-  </a>
 
-  <ul class="steps">
-    <li>Clique sur le bouton vert ci-dessus pour rejoindre <strong>immédiatement</strong> le groupe</li>
-    <li>Tu reçois un email de confirmation dans quelques minutes</li>
-    <li>Tes matériaux de lecture te seront envoyés dans le groupe</li>
-    <li>Papa Diouf t'accueillera personnellement dans le groupe</li>
-    <li>La prochaine session live est <strong>ce samedi</strong> — sois prêt(e) !</li>
-  </ul>
-  <a href="/" class="btn">Retour à l'accueil ✦</a>
+  <!-- VERIFYING STATE -->
+  <div id="state-verifying">
+    <div class="spinner"></div>
+    <div class="badge">Vérification en cours</div>
+    <h1>Confirmation du<br><em>paiement...</em></h1>
+    <p>Nous vérifions ton paiement auprès de PayDunya. Cela prend quelques secondes.</p>
+  </div>
+
+  <!-- SUCCESS STATE -->
+  <div id="state-success">
+    <div class="icon">🎉</div>
+    <div class="badge">Paiement Confirmé</div>
+    <h1>Bienvenue dans la<br><em>Mindset Academy !</em></h1>
+    <p>Ton paiement de <strong style="color:var(--blanc)">5 000 FCFA</strong> a bien été reçu. Tu fais maintenant partie de la communauté des champions.</p>
+    <div class="divider"></div>
+    <a href="https://chat.whatsapp.com/JQPyRWkS1hVJpggG4cRrBD?s=sh&p=i&mlu=4&ilr=4" target="_blank" rel="noopener" class="btn-whatsapp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.868a.5.5 0 00.614.612l6.083-1.516A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.019-1.378l-.36-.214-3.732.93.977-3.646-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+      Rejoindre le Groupe WhatsApp Privé
+    </a>
+    <ul class="steps">
+      <li>Clique sur le bouton vert ci-dessus pour rejoindre <strong>immédiatement</strong> le groupe</li>
+      <li>Tes matériaux de lecture te seront envoyés dans le groupe</li>
+      <li>Papa Diouf t'accueillera personnellement dans le groupe</li>
+      <li>La prochaine session live est <strong>ce samedi</strong> — sois prêt(e) !</li>
+    </ul>
+    <a href="/" class="btn">Retour à l'accueil ✦</a>
+  </div>
+
+  <!-- ERROR STATE -->
+  <div id="state-error">
+    <div class="icon">⚠️</div>
+    <div class="badge" style="border-color:rgba(192,57,43,0.4);color:#E74C3C;background:rgba(192,57,43,0.1);">Vérification impossible</div>
+    <h1>Paiement non<br><em>confirmé</em></h1>
+    <p>Nous n'avons pas pu confirmer ton paiement. Si tu as bien payé, contacte-nous directement sur WhatsApp et nous t'ajouterons manuellement au groupe.</p>
+    <a href="https://wa.me/221772053166" target="_blank" rel="noopener" class="btn-whatsapp" style="animation:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.868a.5.5 0 00.614.612l6.083-1.516A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.019-1.378l-.36-.214-3.732.93.977-3.646-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+      Contacter Papa Diouf sur WhatsApp
+    </a>
+    <a href="/" class="btn" style="margin-top:1rem;">Retour à l'accueil</a>
+  </div>
+
 </div>
+
+<script>
+const token = new URLSearchParams(window.location.search).get('token');
+
+async function checkPayment(attempts) {
+  if (!token) { showError(); return; }
+  try {
+    const res  = await fetch('/api/paydunya/confirm?token=' + encodeURIComponent(token));
+    const data = await res.json();
+    if (data.paid) {
+      showSuccess();
+    } else if (attempts < 10) {
+      setTimeout(() => checkPayment(attempts + 1), 3000);
+    } else {
+      showError();
+    }
+  } catch {
+    if (attempts < 10) setTimeout(() => checkPayment(attempts + 1), 3000);
+    else showError();
+  }
+}
+
+function showSuccess() {
+  document.getElementById('state-verifying').style.display = 'none';
+  document.getElementById('state-success').style.display   = 'block';
+}
+function showError() {
+  document.getElementById('state-verifying').style.display = 'none';
+  document.getElementById('state-error').style.display     = 'block';
+}
+
+checkPayment(0);
+</script>
 </body>
 </html>

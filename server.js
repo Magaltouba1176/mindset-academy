@@ -127,7 +127,7 @@ function serveFile(res, filePath, contentType) {
 
 // ── PayDunya Invoice Creator ──────────────────────────────────────────────────
 
-async function createPaydunyaInvoice({ customerName, customerEmail, customerPhone }) {
+async function createPaydunyaInvoice() {
   if (!keysConfigured()) {
     throw new Error("PayDunya API keys are not configured in .env");
   }
@@ -160,15 +160,9 @@ async function createPaydunyaInvoice({ customerName, customerEmail, customerPhon
       website_url:    APP_URL,
     },
     actions: {
-      cancel_url:  `${APP_URL}/cancel.html`,
-      return_url:  `${APP_URL}/success.html`,
-      callback_url: `${APP_URL}/api/paydunya/webhook`, // server-to-server
-    },
-    custom_data: {
-      customer_name:  customerName,
-      customer_email: customerEmail,
-      customer_phone: customerPhone,
-      product:        PRODUCT.name,
+      cancel_url:   `${APP_URL}/cancel.html`,
+      return_url:   `${APP_URL}/success.html`,
+      callback_url: `${APP_URL}/api/paydunya/webhook`,
     },
   };
 
@@ -255,22 +249,33 @@ const server = http.createServer(async (req, res) => {
   // ── API: Create PayDunya invoice ──────────────────────────────────────────
   if (pathname === "/api/paydunya/checkout" && method === "POST") {
     try {
-      const body = await parseBody(req);
-      const { customerName, customerEmail, customerPhone } = body;
-
-      if (!customerName || !customerEmail || !customerPhone) {
-        return json(res, 400, { error: "Merci de remplir tous les champs (nom, email, téléphone)." });
-      }
-
-      console.log(`💳 Creating invoice for: ${customerName} <${customerEmail}>`);
-      const invoice = await createPaydunyaInvoice({ customerName, customerEmail, customerPhone });
-
+      console.log("💳 Creating PayDunya invoice");
+      const invoice = await createPaydunyaInvoice();
       return json(res, 200, {
         invoiceUrl: invoice.invoice_url,
         token:      invoice.token,
       });
     } catch (err) {
       console.error("Checkout error:", err.message);
+      return json(res, 500, { error: err.message });
+    }
+  }
+
+  // ── API: Confirm payment status (called by success.html) ─────────────────
+  if (pathname === "/api/paydunya/confirm" && method === "GET") {
+    const token = parsed.query.token;
+    if (!token) return json(res, 400, { error: "Token manquant" });
+    try {
+      const pdHeaders = {
+        "PAYDUNYA-MASTER-KEY":  PAYDUNYA.masterKey,
+        "PAYDUNYA-PRIVATE-KEY": PAYDUNYA.privateKey,
+        "PAYDUNYA-TOKEN":       PAYDUNYA.token,
+      };
+      const result = await httpGet(`${PD_BASE}/checkout-invoice/confirm/${token}`, pdHeaders);
+      const status = result.body.invoice?.status || "unknown";
+      return json(res, 200, { status, paid: status === "completed" });
+    } catch (err) {
+      console.error("Confirm error:", err.message);
       return json(res, 500, { error: err.message });
     }
   }

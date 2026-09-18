@@ -289,16 +289,6 @@ blockquote.rumi cite { display:block; margin-top:0.5rem; font-size:0.72rem; lett
 .wave-logo-text { font-family:var(--serif); font-size:1.2rem; font-weight:600; color:var(--blanc); }
 .wave-logo-sub { font-size:0.65rem; color:var(--gris); }
 
-.form-group { margin-bottom:0.8rem; }
-.form-label { display:block; font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gris); margin-bottom:0.5rem; }
-.form-input {
-  width:100%; background:var(--dark3); border:1px solid rgba(201,168,76,0.15);
-  color:var(--blanc); font-family:var(--sans); font-size:0.9rem;
-  padding:0.9rem 1rem; outline:none; transition:border-color 0.3s;
-}
-.form-input:focus { border-color:var(--or); }
-.form-input::placeholder { color:rgba(136,136,128,0.5); }
-.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
 
 .wave-amount-display {
   background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2);
@@ -321,26 +311,6 @@ blockquote.rumi cite { display:block; margin-top:0.5rem; font-size:0.72rem; lett
 .wave-security { display:flex; align-items:center; gap:0.5rem; margin-top:0.8rem; justify-content:center; }
 .wave-security span { font-size:0.65rem; color:var(--gris); letter-spacing:0.08em; }
 
-/* Success Modal */
-.modal-overlay {
-  display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92);
-  z-index:500; align-items:center; justify-content:center;
-}
-.modal-overlay.active { display:flex; }
-.modal-box {
-  background:var(--dark2); border:1px solid rgba(201,168,76,0.25);
-  padding:3rem; max-width:480px; width:90%; text-align:center;
-  position:relative;
-}
-.modal-icon { font-size:3rem; margin-bottom:1.2rem; }
-.modal-box h3 { font-family:var(--serif); font-size:1.8rem; font-weight:300; margin-bottom:1rem; }
-.modal-box h3 em { font-style:italic; color:var(--or); }
-.modal-box p { font-size:0.88rem; line-height:1.7; color:var(--gris); margin-bottom:1.5rem; }
-.modal-steps { text-align:left; list-style:none; margin-bottom:2rem; }
-.modal-steps li { font-size:0.85rem; padding:0.6rem 0; border-bottom:1px solid rgba(201,168,76,0.08); display:flex; gap:0.8rem; }
-.modal-steps li:last-child { border-bottom:none; }
-.modal-steps li::before { content:'✦'; color:var(--or); font-size:0.6rem; margin-top:0.25rem; }
-.btn-modal { background:var(--or); color:var(--noir); border:none; padding:0.9rem 2.5rem; font-family:var(--sans); font-size:0.78rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; cursor:pointer; }
 
 /* ── FAQ ── */
 .faq { background:var(--dark); }
@@ -402,7 +372,6 @@ footer {
   .hero-stat-bar { flex-direction:row; }
   .douleur-grid, .offre-grid, .testi-grid, .semaines { grid-template-columns:1fr; }
   .concept-inner, .apropos-inner, .paiement-inner { grid-template-columns:1fr; gap:2rem; }
-  .form-row { grid-template-columns:1fr; }
   footer { flex-direction:column; text-align:center; }
   .f-links { justify-content:center; flex-wrap:wrap; }
 }
@@ -736,7 +705,7 @@ footer {
 
         <p style="font-size:0.78rem;color:var(--gris);line-height:1.6">
           ✦ Places limitées — Le groupe reste petit pour garantir une vraie transformation<br>
-          ✦ Après paiement, tu reçois un lien WhatsApp et tes matériaux dans les 24h
+          ✦ Lien WhatsApp privé affiché immédiatement après confirmation du paiement
         </p>
       </div>
 
@@ -755,22 +724,9 @@ footer {
           <div class="wave-amount-val">5 000 FCFA</div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label">Prénom &amp; Nom</label>
-          <input class="form-input" type="text" id="nom" placeholder="Ex: Aminata Diallo" />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Numéro Wave (avec indicatif)</label>
-          <input class="form-input" type="tel" id="phone" placeholder="Ex: +221 77 000 00 00" />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email</label>
-          <input class="form-input" type="email" id="email" placeholder="ton@email.com" />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Ton activité / domaine</label>
-          <input class="form-input" type="text" id="activite" placeholder="Ex: Entrepreneur, Commerçant, Manager..." />
-        </div>
+        <p style="font-size:0.88rem;color:var(--gris);line-height:1.7;margin-bottom:1.5rem;text-align:center;">
+          Clique ci-dessous. PayDunya te demandera tes informations et ton moyen de paiement (Wave, Orange Money, Carte…).
+        </p>
 
         <div id="wave-msg" style="display:none;padding:0.8rem;margin-bottom:1rem;font-size:0.82rem;"></div>
 
@@ -840,7 +796,7 @@ footer {
           Comment payer avec Wave ?
           <span class="icon">+</span>
         </button>
-        <div class="faq-a">Remplis le formulaire ci-dessus avec tes informations. Clique sur "Payer avec Wave". Tu recevras une notification Wave sur ton téléphone à confirmer. Une fois le paiement confirmé, nous te contacterons pour l'accès au groupe.</div>
+        <div class="faq-a">Clique sur le bouton "Payer 5 000 FCFA". Tu seras redirigé(e) vers PayDunya où tu entres tes informations et choisis ton moyen de paiement (Wave, Orange Money, Carte…). Une fois le paiement confirmé, le lien du groupe WhatsApp s'affiche immédiatement.</div>
       </div>
     </div>
   </div>
@@ -856,22 +812,6 @@ footer {
   <p style="margin-top:1.5rem;font-size:0.72rem;color:rgba(136,136,128,0.5);letter-spacing:0.1em;text-transform:uppercase">Paiement Wave · Accès WhatsApp immédiat · Places limitées</p>
 </section>
 
-<!-- SUCCESS MODAL -->
-<div class="modal-overlay" id="modal">
-  <div class="modal-box">
-    <div class="modal-icon">🎉</div>
-    <h3>Bienvenue dans la<br><em>Mindset Academy !</em></h3>
-    <p>Ton paiement est en cours de traitement. Voici ce qui se passe maintenant :</p>
-    <ul class="modal-steps">
-      <li>Tu reçois une confirmation Wave sur ton téléphone</li>
-      <li>Dans les 24h, tu reçois le lien du groupe WhatsApp privé</li>
-      <li>Tes matériaux de lecture te seront envoyés par email</li>
-      <li>Papa Diouf te souhaite la bienvenue personnellement dans le groupe</li>
-    </ul>
-    <button class="btn-modal" onclick="fermerModal()">Parfait, j'ai compris ! ✦</button>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <footer>
   <div class="f-logo">Mindset Academy · Papa Diouf</div>
@@ -886,67 +826,30 @@ footer {
 </footer>
 
 <script>
-// ── PAYDUNYA PAYMENT INTEGRATION ──────────────────────────────────────────────
-// All API keys live in server.js via .env — ZERO secrets in this file.
-// This frontend only calls our own backend endpoint: /api/paydunya/checkout
-
 async function lancerPaiement() {
-  const nom      = document.getElementById('nom').value.trim();
-  const phone    = document.getElementById('phone').value.trim();
-  const email    = document.getElementById('email').value.trim();
-  const activite = document.getElementById('activite').value.trim();
-
-  // ── Client-side validation ────────────────────────────────────────────────
-  if (!nom || !phone || !email) {
-    afficherMsg('error', '⚠ Merci de remplir tous les champs obligatoires (nom, téléphone, email).');
-    return;
-  }
-  if (!email.includes('@') || !email.includes('.')) {
-    afficherMsg('error', '⚠ Merci d\'entrer une adresse email valide.');
-    return;
-  }
-
   const btn = document.getElementById('wave-btn');
-  document.getElementById('wave-btn-text').textContent = 'Création de la facture...';
   btn.classList.add('loading');
-  afficherMsg('info', '⏳ Connexion à PayDunya en cours...');
+  document.getElementById('wave-btn-text').textContent = 'Connexion à PayDunya...';
+  afficherMsg('info', '⏳ Création de ta facture de paiement...');
 
   try {
-    // ── Call our secure backend (keys never leave the server) ──────────────
     const response = await fetch('/api/paydunya/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        customerName:  nom,
-        customerEmail: email,
-        customerPhone: phone,
-        activity:      activite,
-      }),
+      body: JSON.stringify({}),
     });
-
     const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.error || 'Erreur serveur (' + response.status + ')');
-    }
-
-    if (!data.invoiceUrl) {
-      throw new Error('URL de paiement manquante dans la réponse.');
-    }
-
-    // ── Redirect to PayDunya hosted payment page ───────────────────────────
-    afficherMsg('info', '✅ Facture créée ! Redirection vers PayDunya...');
-    setTimeout(() => { window.location.href = data.invoiceUrl; }, 800);
-
+    if (!response.ok) throw new Error(data.error || 'Erreur serveur (' + response.status + ')');
+    if (!data.invoiceUrl) throw new Error('URL de paiement manquante.');
+    afficherMsg('info', '✅ Redirection vers PayDunya...');
+    setTimeout(() => { window.location.href = data.invoiceUrl; }, 600);
   } catch (err) {
-    console.error('PayDunya error:', err);
-    document.getElementById('wave-btn-text').textContent = 'Payer 5 000 FCFA — PayDunya';
     btn.classList.remove('loading');
-    afficherMsg('error', '❌ ' + (err.message || 'Problème de connexion. Réessaie ou contacte-nous sur WhatsApp.'));
+    document.getElementById('wave-btn-text').textContent = 'Payer 5 000 FCFA — PayDunya';
+    afficherMsg('error', '❌ ' + (err.message || 'Problème de connexion. Réessaie dans quelques secondes.'));
   }
 }
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
 function afficherMsg(type, msg) {
   const el = document.getElementById('wave-msg');
   if (!msg) { el.style.display = 'none'; return; }
@@ -959,13 +862,6 @@ function afficherMsg(type, msg) {
   el.textContent = msg;
 }
 
-function ouvrirModal() { document.getElementById('modal').classList.add('active'); }
-function fermerModal() { document.getElementById('modal').classList.remove('active'); }
-document.getElementById('modal').addEventListener('click', (e) => {
-  if (e.target === document.getElementById('modal')) fermerModal();
-});
-
-// ── FAQ Toggle ────────────────────────────────────────────────────────────────
 function toggleFaq(btn) {
   const isOpen = btn.classList.contains('open');
   document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
@@ -976,7 +872,6 @@ function toggleFaq(btn) {
   }
 }
 
-// ── Smooth Scroll ─────────────────────────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
